@@ -235,7 +235,7 @@
     <div class="hero-stat"><div class="num">29</div><div class="label">AI Rules</div></div>
     <div class="hero-stat"><div class="num">12</div><div class="label">Custom Commands</div></div>
     <div class="hero-stat"><div class="num">10</div><div class="label">MCP Integrations</div></div>
-    <div class="hero-stat"><div class="num">7</div><div class="label">Scheduled Automations</div></div>
+    <div class="hero-stat"><div class="num">8</div><div class="label">Scheduled Automations</div></div>
   </div>
 </div>
 
@@ -335,6 +335,7 @@
       <div class="arch-box orange-hl">Weekly Job Report<br><small>Sun 6:00 PM</small></div>
       <div class="arch-box orange-hl">AI Podcast<br><small>Daily 10:00 AM</small></div>
       <div class="arch-box orange-hl">Trading Briefing<br><small>Daily 10:05 AM</small></div>
+      <div class="arch-box orange-hl">Daily Volume Report<br><small>Weekdays 8:00 AM</small></div>
     </div>
 
     <div class="arch-connector">▼ Persistent State ▼</div>
@@ -592,7 +593,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <section id="automations">
   <div class="section-label">Unattended Automation</div>
-  <h2>7 Scheduled Jobs — Work That Happens Without You</h2>
+  <h2>8 Scheduled Jobs — Work That Happens Without You</h2>
   <p class="section-desc">macOS LaunchAgents run background tasks on schedule, generating reports, refreshing credentials, and syncing repositories. A self-monitoring weekly report tracks all job health.</p>
 
   <div class="card-grid">
@@ -637,6 +638,12 @@
       <h4>Daily Trading Industry Briefing</h4>
       <p>Every day at 10:05 AM: Claude Code CLI runs 5 targeted web searches for competitor news (Robinhood, Coinbase, Trade Republic, Kraken, XTB, neobrokers), compiles a 5-story briefing with eToro-specific competitive analysis, generates an audio podcast via NotebookLM, and emails the text + audio link to stakeholder. Fully automated competitive intelligence pipeline.</p>
       <span class="tag tag-orange">Daily 10:05 AM</span>
+    </div>
+    <div class="card">
+      <div class="icon">📈</div>
+      <h4>Daily Trading Volume Report</h4>
+      <p>Every weekday at 8:00 AM: queries Databricks Data Lake (6 granular tables) for previous trading day volume, aggregates by HSID/strategy, instrument type, and geography, generates AI narrative comparing today vs 7-day averages, renders interactive HTML with Chart.js, converts to PDF, and emails to stakeholders. Includes unique user counts, country breakdown, fill ratios, latency, and slippage metrics.</p>
+      <span class="tag tag-orange">Weekdays 8:00 AM</span>
     </div>
   </div>
 </section>
@@ -749,6 +756,11 @@
       <div class="timeline-desc">150+ Reforge snippets analyzed across 7 categories. Built competitive analysis vs IBKR, Robinhood, Trading 212, Wealthsimple. Created 3-tier monetization model ($7.2M/yr projected incremental revenue).</div>
     </div>
     <div class="timeline-item">
+      <div class="timeline-date">April 3–5, 2026</div>
+      <div class="timeline-title">Daily Trading Volume Report — Built &amp; Automated</div>
+      <div class="timeline-desc">End-to-end report built from scratch: migrated data source from unreliable aggregated table to 6 granular Data Lake tables (dim_position, emsorders, orderlog, dim_instrument, dim_customer_masked, dim_country), added HSID strategy name resolution, instrument type breakdown with latency/slippage, geography breakdown by country, unique user counts, and AI-generated narrative analysis. Interactive HTML with Chart.js, PDF conversion via Chrome headless, automated daily email via LaunchAgent. Iteratively fixed PDF rendering (doughnut chart closure, table column clipping, legend overflow) and data accuracy (Decimal type handling, eToro internal CountryID mapping).</div>
+    </div>
+    <div class="timeline-item">
       <div class="timeline-date">April 1, 2026</div>
       <div class="timeline-title">First Automated Weekly Trading Issues Report</div>
       <div class="timeline-desc">~37,900 snippets analyzed across 5 query categories. Top 10 issues identified and ranked by severity. Report auto-generated, converted to PDF, and emailed to stakeholder.</div>
@@ -810,17 +822,18 @@
       <tr><td>PRD / spec authoring</td><td>~4 hours/doc</td><td>~1.5 hours/doc</td><td><strong>2.5 hours</strong></td></tr>
       <tr><td>Architecture &amp; dependency documentation</td><td>~2 hours</td><td>~15 minutes</td><td><strong>1.75 hours</strong></td></tr>
       <tr><td>Repository maintenance (30+ repos)</td><td>~30 minutes</td><td>Automated (0 min)</td><td><strong>30 minutes</strong></td></tr>
+      <tr><td>Daily volume reporting &amp; distribution</td><td>~45 min/day × 5</td><td>Automated (0 min)</td><td><strong>3.75 hours</strong></td></tr>
       <tr style="background:var(--accent-dim);">
         <td><strong>Total Weekly Savings</strong></td>
         <td></td>
         <td></td>
-        <td><strong style="color:var(--green);font-size:1.1rem;">~13 hours/week</strong></td>
+        <td><strong style="color:var(--green);font-size:1.1rem;">~17 hours/week</strong></td>
       </tr>
     </tbody>
   </table>
 
   <div class="callout green">
-    <strong>13 hours/week reclaimed</strong> means the TPM spends roughly 30% less time on operational mechanics and 30% more time on strategic product thinking: stakeholder alignment, trade-off analysis, architectural decisions, and roadmap prioritization.
+    <strong>17 hours/week reclaimed</strong> means the TPM spends roughly 40% less time on operational mechanics and redirects that capacity to strategic product thinking: stakeholder alignment, trade-off analysis, architectural decisions, and roadmap prioritization.
   </div>
 
   <h3>Qualitative Business Benefits</h3>
@@ -884,7 +897,7 @@
       <tr>
         <td>Automation</td>
         <td>Manual trigger only</td>
-        <td>7 scheduled jobs run unattended</td>
+        <td>8 scheduled jobs run unattended</td>
       </tr>
       <tr>
         <td>Personalization</td>
