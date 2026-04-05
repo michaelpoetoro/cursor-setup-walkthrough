@@ -22,6 +22,8 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     background: var(--bg); color: var(--text); line-height: 1.7;
   }
+
+  /* ── Nav ─────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(13,17,23,0.92); backdrop-filter: blur(12px);
@@ -35,6 +37,8 @@
     font-weight: 500; white-space: nowrap; transition: color 0.2s;
   }
   nav .nav-links a:hover { color: var(--text); }
+
+  /* ── Hero ─────────────────────────────────── */
   .hero {
     padding: 7rem 2rem 4rem; max-width: 960px; margin: 0 auto; text-align: center;
   }
@@ -53,6 +57,8 @@
   .hero-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
   .hero-stat .num { font-size: 2.2rem; font-weight: 800; color: var(--accent); }
   .hero-stat .label { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── Sections ────────────────────────────── */
   section { max-width: 960px; margin: 0 auto; padding: 4rem 2rem; }
   section + section { border-top: 1px solid var(--border); }
   .section-label {
@@ -62,6 +68,8 @@
   h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
   h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text); }
   p.section-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; max-width: 700px; }
+
+  /* ── Cards ───────────────────────────────── */
   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
   .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
   .card {
@@ -82,6 +90,8 @@
   .tag-yellow { background: var(--yellow-dim); color: var(--yellow); }
   .tag-orange { background: var(--orange-dim); color: var(--orange); }
   .tag-teal { background: var(--teal-dim); color: var(--teal); }
+
+  /* ── Architecture diagram ──────────────── */
   .arch-diagram {
     background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
     padding: 2rem; margin: 1.5rem 0; overflow-x: auto;
@@ -104,6 +114,8 @@
     font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
     color: var(--text-dim); margin-bottom: 0.4rem;
   }
+
+  /* ── Tables ──────────────────────────────── */
   table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 1rem 0; }
   th, td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
   th {
@@ -115,6 +127,8 @@
     font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 0.78rem;
     background: var(--surface-2); padding: 0.15rem 0.4rem; border-radius: 4px;
   }
+
+  /* ── Timeline ───────────────────────────── */
   .timeline { position: relative; padding-left: 2rem; }
   .timeline::before {
     content: ''; position: absolute; left: 0.6rem; top: 0; bottom: 0;
@@ -129,6 +143,8 @@
   .timeline-date { font-size: 0.72rem; color: var(--text-dim); font-weight: 600; margin-bottom: 0.2rem; }
   .timeline-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.2rem; }
   .timeline-desc { font-size: 0.82rem; color: var(--text-muted); }
+
+  /* ── Callout ─────────────────────────────── */
   .callout {
     background: var(--accent-dim); border-left: 3px solid var(--accent);
     border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0;
@@ -137,6 +153,8 @@
   .callout strong { color: var(--accent); }
   .callout.green { background: var(--green-dim); border-color: var(--green); }
   .callout.green strong { color: var(--green); }
+
+  /* ── Metric Row ─────────────────────────── */
   .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; }
   .metric-card {
     background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
@@ -148,6 +166,8 @@
   .num.green { color: var(--green); }
   .num.purple { color: var(--purple); }
   .num.orange { color: var(--orange); }
+
+  /* ── Flow bars ──────────────────────────── */
   .flow-bar {
     display: flex; align-items: center; gap: 0.5rem; margin: 0.6rem 0;
     font-size: 0.82rem;
@@ -158,11 +178,15 @@
   }
   .flow-bar .arrow { color: var(--text-dim); font-size: 0.9rem; }
   .flow-bar .step.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  /* ── Footer ──────────────────────────────── */
   footer {
     max-width: 960px; margin: 0 auto; padding: 2rem;
     border-top: 1px solid var(--border);
     color: var(--text-dim); font-size: 0.75rem; text-align: center;
   }
+
+  /* ── Responsive ──────────────────────────── */
   @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
     .hero-stats { gap: 1.5rem; }
@@ -170,18 +194,22 @@
     .metric-row { grid-template-columns: repeat(2, 1fr); }
     nav .nav-links { gap: 0.75rem; }
   }
+
+  /* ── Expandable sections ─────────────────── */
   details { margin: 0.75rem 0; }
   details summary {
     cursor: pointer; font-weight: 600; font-size: 0.9rem;
     padding: 0.6rem 0; color: var(--text); list-style: none;
     display: flex; align-items: center; gap: 0.5rem;
   }
-  details summary::before { content: '\25B8'; color: var(--text-dim); transition: transform 0.2s; }
+  details summary::before { content: '▸'; color: var(--text-dim); transition: transform 0.2s; }
   details[open] summary::before { transform: rotate(90deg); }
   details .detail-content { padding: 0.5rem 0 0.5rem 1.25rem; }
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav>
   <div class="logo">Cursor AI Setup</div>
   <div class="nav-links">
@@ -196,6 +224,8 @@
     <a href="#business-case">Business Case</a>
   </div>
 </nav>
+
+<!-- HERO -->
 <div class="hero">
   <div class="badge">TECHNICAL PRODUCT MANAGEMENT &times; AI</div>
   <h1>AI-Augmented TPM Workflow</h1>
@@ -205,43 +235,54 @@
     <div class="hero-stat"><div class="num">29</div><div class="label">AI Rules</div></div>
     <div class="hero-stat"><div class="num">12</div><div class="label">Custom Commands</div></div>
     <div class="hero-stat"><div class="num">10</div><div class="label">MCP Integrations</div></div>
-    <div class="hero-stat"><div class="num">6</div><div class="label">Scheduled Automations</div></div>
+    <div class="hero-stat"><div class="num">7</div><div class="label">Scheduled Automations</div></div>
   </div>
 </div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: OVERVIEW -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="overview">
   <div class="section-label">Overview</div>
   <h2>What Is This?</h2>
-  <p class="section-desc">This is a purpose-built AI assistant configuration that gives a Technical Product Manager (TPM) deep, persistent knowledge of a complex trading platform &mdash; and the ability to act on it across every tool in the product development lifecycle.</p>
+  <p class="section-desc">This is a purpose-built AI assistant configuration that gives a Technical Product Manager (TPM) deep, persistent knowledge of a complex trading platform — and the ability to act on it across every tool in the product development lifecycle.</p>
+
   <div class="card-grid card-grid-3">
     <div class="card">
-      <div class="icon">&#129504;</div>
+      <div class="icon">🧠</div>
       <h4>Persistent Domain Memory</h4>
       <p>14 skill files encode deep institutional knowledge about dealing execution, trading flows, market data pipelines, data structures, and platform architecture. The AI retains this across every session.</p>
       <span class="tag tag-blue">Skills</span>
     </div>
     <div class="card">
-      <div class="icon">&#9889;</div>
+      <div class="icon">⚡</div>
       <h4>One-Command Workflows</h4>
       <p>12 custom slash commands automate multi-step workflows: creating Jira tickets, syncing Monday.com boards, generating PRDs, querying production data, and publishing weekly reports.</p>
       <span class="tag tag-green">Commands</span>
     </div>
     <div class="card">
-      <div class="icon">&#128279;</div>
+      <div class="icon">🔗</div>
       <h4>Connected Tool Ecosystem</h4>
       <p>10 MCP (Model Context Protocol) integrations connect the AI directly to Jira, Monday.com, Figma, Mixpanel, Databricks, Spinach, Reforge, GitHub, and internal eToro services.</p>
       <span class="tag tag-purple">Integrations</span>
     </div>
   </div>
+
   <div class="callout" style="margin-top:2rem;">
     <strong>Who is this for?</strong> This setup is operated by Michael Portnov, a Technical PM on eToro's Trading Platform &amp; Dealing Engines team. He manages requirements, specifications, architecture documentation, database governance, and operational tooling across 30+ repositories in the Global Broker-Dealer (GBD) platform.
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: ARCHITECTURE -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="architecture">
   <div class="section-label">Architecture</div>
   <h2>How the System Fits Together</h2>
   <p class="section-desc">Five interconnected layers turn the Cursor IDE from a code editor into a full-spectrum TPM cockpit.</p>
+
   <div class="arch-diagram">
-    <div class="arch-label">Layer 1 &mdash; External Services (MCP Integrations)</div>
+    <div class="arch-label">Layer 1 — External Services (MCP Integrations)</div>
     <div class="arch-row">
       <div class="arch-box highlight">Jira (Atlassian)</div>
       <div class="arch-box highlight">Monday.com</div>
@@ -256,17 +297,21 @@
       <div class="arch-box highlight">eToro Internal APIs</div>
       <div class="arch-box highlight">eToro API Docs</div>
     </div>
-    <div class="arch-connector">&#9660; MCP Protocol &#9660;</div>
-    <div class="arch-label">Layer 2 &mdash; AI Agent (Cursor + Claude)</div>
+
+    <div class="arch-connector">▼ MCP Protocol ▼</div>
+
+    <div class="arch-label">Layer 2 — AI Agent (Cursor + Claude)</div>
     <div class="arch-row">
       <div class="arch-box purple-hl" style="flex:2;">Cursor Agent with 14 Domain Skills</div>
       <div class="arch-box purple-hl">29 Always-On Rules</div>
     </div>
-    <div class="arch-connector">&#9660; Slash Commands &#9660;</div>
-    <div class="arch-label">Layer 3 &mdash; Workflow Orchestration (12 Commands)</div>
+
+    <div class="arch-connector">▼ Slash Commands ▼</div>
+
+    <div class="arch-label">Layer 3 — Workflow Orchestration (12 Commands)</div>
     <div class="arch-row">
       <div class="arch-box green-hl">Ticket Creation</div>
-      <div class="arch-box green-hl">Meeting &rarr; Ticket</div>
+      <div class="arch-box green-hl">Meeting → Ticket</div>
       <div class="arch-box green-hl">Monday Task Sync</div>
       <div class="arch-box green-hl">PRD Authoring</div>
     </div>
@@ -276,8 +321,10 @@
       <div class="arch-box green-hl">Design System Sync</div>
       <div class="arch-box green-hl">Snapshot Update</div>
     </div>
-    <div class="arch-connector">&#9660; Scheduled Execution &#9660;</div>
-    <div class="arch-label">Layer 4 &mdash; Automation (macOS LaunchAgents)</div>
+
+    <div class="arch-connector">▼ Scheduled Execution ▼</div>
+
+    <div class="arch-label">Layer 4 — Automation (macOS LaunchAgents)</div>
     <div class="arch-row">
       <div class="arch-box orange-hl">Trading Issues Report<br><small>Mon 9:30 AM</small></div>
       <div class="arch-box orange-hl">Repo Auto-Pull<br><small>Mon 9:00 AM</small></div>
@@ -286,218 +333,578 @@
     </div>
     <div class="arch-row">
       <div class="arch-box orange-hl">Weekly Job Report<br><small>Sun 6:00 PM</small></div>
-      <div class="arch-box orange-hl">AI Podcast<br><small>Daily</small></div>
+      <div class="arch-box orange-hl">AI Podcast<br><small>Daily 10:00 AM</small></div>
+      <div class="arch-box orange-hl">Trading Briefing<br><small>Daily 10:05 AM</small></div>
     </div>
-    <div class="arch-connector">&#9660; Persistent State &#9660;</div>
-    <div class="arch-label">Layer 5 &mdash; Memory &amp; State</div>
+
+    <div class="arch-connector">▼ Persistent State ▼</div>
+
+    <div class="arch-label">Layer 5 — Memory &amp; State</div>
     <div class="arch-row">
       <div class="arch-box yellow-hl" style="flex:2;">project-state.mdc (auto-updated cross-session memory)</div>
       <div class="arch-box yellow-hl">HTML Reports Archive</div>
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: SKILLS -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="skills">
   <div class="section-label">Domain Knowledge</div>
-  <h2>14 Skills &mdash; Institutional Knowledge as Code</h2>
+  <h2>14 Skills — Institutional Knowledge as Code</h2>
   <p class="section-desc">Each skill file encodes deep domain expertise that would normally live only in people's heads. The AI reads these on demand to give expert-level answers without re-learning the domain each session.</p>
+
   <div class="card-grid">
-    <div class="card"><h4>Dealing Business Logic</h4><p>Production execution regimes (CBH, HBC, DMA, UNMANAGED), exposure management, netting, circuit breakers, 16 LP providers via FIX, hedge routing, smart execution strategies.</p><span class="tag tag-blue">Execution</span></div>
-    <div class="card"><h4>Trading Business Logic</h4><p>Full client order lifecycle: Trading API, OME order matching, ODE saga orchestration, SL/TP mechanics, position management, copy trading tree calculation.</p><span class="tag tag-blue">Trading</span></div>
-    <div class="card"><h4>Market Data Business Logic</h4><p>Bloomberg B-Pipe ingestion, pricing pipeline, TOB/Last Trade, candle building, settlement pricing, feed quality monitoring, stale detection, 22 microservices mapped.</p><span class="tag tag-blue">Market Data</span></div>
-    <div class="card"><h4>GBD Data Structure</h4><p>Every field in the quote-to-execution lifecycle mapped to source DB table, Data Lake table, and Data Lake field. Best Execution BI report with 27 ActionTypeReason classifications across 13 jurisdictions.</p><span class="tag tag-teal">Data</span></div>
-    <div class="card"><h4>Global Broker-Dealer Architecture</h4><p>Unified cross-domain architecture: every service's repo, config pattern (SCB/CCM/Direct), layer role, and integration points. Full Bloomberg-tick-to-client-fill path.</p><span class="tag tag-purple">Architecture</span></div>
-    <div class="card"><h4>Dealing Execution Architecture</h4><p>Live production snapshot: HedgeServer-LP mappings, NOP exposure, CEP boundaries, execution factors, price sources, slippage benchmarks, OMS IM settings. Auto-refreshed via Databricks queries.</p><span class="tag tag-purple">Architecture</span></div>
-    <div class="card"><h4>eToro Mixpanel Analytics</h4><p>Event taxonomy, property mappings, funnel recipes for trading/MIMO/crypto/banking flows. Ready-to-run query templates for product analytics.</p><span class="tag tag-teal">Analytics</span></div>
-    <div class="card"><h4>eToro Frontend Design System</h4><p>Design tokens (colors, typography, spacing), component patterns, light/dark theme. Synced weekly from Figma DS--React source file via MCP.</p><span class="tag tag-orange">Design</span></div>
-    <div class="card"><h4>Jira Ticket Generator</h4><p>Structured ticket creation with domain-aware templates for DEAL, DEALR, BDDMD, and EMM projects. Interviews, drafts, and creates with proper custom fields.</p><span class="tag tag-green">Workflow</span></div>
-    <div class="card"><h4>Doc Co-Authoring</h4><p>3-stage workflow for PRDs, tech specs, decision docs: context gathering, section-by-section refinement, automated reader testing via sub-agents.</p><span class="tag tag-green">Workflow</span></div>
-    <div class="card"><h4>Reverse Engineer Feature</h4><p>Multi-agent deep investigation of legacy Angular codebase features. Outputs product spec and technical spec ready for spec-kit integration.</p><span class="tag tag-yellow">Legacy</span></div>
-    <div class="card"><h4>Michael's Personality &amp; Role</h4><p>Communication style, writing conventions, structural preferences. Ensures AI output matches the TPM's voice: direct, structured, no-fluff, quantified.</p><span class="tag tag-purple">Personalization</span></div>
+    <div class="card">
+      <h4>Dealing Business Logic</h4>
+      <p>Production execution regimes (CBH, HBC, DMA, UNMANAGED), exposure management, netting, circuit breakers, 16 LP providers via FIX, hedge routing, smart execution strategies.</p>
+      <span class="tag tag-blue">Execution</span>
+    </div>
+    <div class="card">
+      <h4>Trading Business Logic</h4>
+      <p>Full client order lifecycle: Trading API, OME order matching, ODE saga orchestration, SL/TP mechanics, position management, copy trading tree calculation.</p>
+      <span class="tag tag-blue">Trading</span>
+    </div>
+    <div class="card">
+      <h4>Market Data Business Logic</h4>
+      <p>Bloomberg B-Pipe ingestion, pricing pipeline, TOB/Last Trade, candle building, settlement pricing, feed quality monitoring, stale detection, 22 microservices mapped.</p>
+      <span class="tag tag-blue">Market Data</span>
+    </div>
+    <div class="card">
+      <h4>GBD Data Structure</h4>
+      <p>Every field in the quote-to-execution lifecycle mapped to source DB table, Data Lake table, and Data Lake field. Best Execution BI report with 27 ActionTypeReason classifications across 13 jurisdictions.</p>
+      <span class="tag tag-teal">Data</span>
+    </div>
+    <div class="card">
+      <h4>Global Broker-Dealer Architecture</h4>
+      <p>Unified cross-domain architecture: every service's repo, config pattern (SCB/CCM/Direct), layer role, and integration points. Full Bloomberg-tick-to-client-fill path.</p>
+      <span class="tag tag-purple">Architecture</span>
+    </div>
+    <div class="card">
+      <h4>Dealing Execution Architecture</h4>
+      <p>Live production snapshot: HedgeServer-LP mappings, NOP exposure, CEP boundaries, execution factors, price sources, slippage benchmarks, OMS IM settings. Auto-refreshed via Databricks queries.</p>
+      <span class="tag tag-purple">Architecture</span>
+    </div>
+    <div class="card">
+      <h4>eToro Mixpanel Analytics</h4>
+      <p>Event taxonomy, property mappings, funnel recipes for trading/MIMO/crypto/banking flows. Ready-to-run query templates for product analytics.</p>
+      <span class="tag tag-teal">Analytics</span>
+    </div>
+    <div class="card">
+      <h4>eToro Frontend Design System</h4>
+      <p>Design tokens (colors, typography, spacing), component patterns, light/dark theme. Synced weekly from Figma DS--React source file via MCP.</p>
+      <span class="tag tag-orange">Design</span>
+    </div>
+    <div class="card">
+      <h4>Jira Ticket Generator</h4>
+      <p>Structured ticket creation with domain-aware templates for DEAL, DEALR, BDDMD, and EMM projects. Interviews, drafts, and creates with proper custom fields.</p>
+      <span class="tag tag-green">Workflow</span>
+    </div>
+    <div class="card">
+      <h4>Doc Co-Authoring</h4>
+      <p>3-stage workflow for PRDs, tech specs, decision docs: context gathering, section-by-section refinement, automated reader testing via sub-agents.</p>
+      <span class="tag tag-green">Workflow</span>
+    </div>
+    <div class="card">
+      <h4>Reverse Engineer Feature</h4>
+      <p>Multi-agent deep investigation of legacy Angular codebase features. Outputs product spec and technical spec ready for spec-kit integration.</p>
+      <span class="tag tag-yellow">Legacy</span>
+    </div>
+    <div class="card">
+      <h4>Michael's Personality &amp; Role</h4>
+      <p>Communication style, writing conventions, structural preferences. Ensures AI output matches the TPM's voice: direct, structured, no-fluff, quantified.</p>
+      <span class="tag tag-purple">Personalization</span>
+    </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: COMMANDS -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="commands">
   <div class="section-label">Workflow Automation</div>
-  <h2>12 Slash Commands &mdash; Multi-Step Workflows in One Trigger</h2>
+  <h2>12 Slash Commands — Multi-Step Workflows in One Trigger</h2>
   <p class="section-desc">Each command orchestrates a complex, multi-tool workflow that would otherwise take 15-45 minutes of manual context-switching between applications.</p>
+
   <table>
-    <thead><tr><th>Command</th><th>What It Does</th><th>Tools Orchestrated</th><th>Time Saved</th></tr></thead>
+    <thead>
+      <tr><th>Command</th><th>What It Does</th><th>Tools Orchestrated</th><th>Time Saved</th></tr>
+    </thead>
     <tbody>
-      <tr><td><code>/newticketflow</code></td><td>End-to-end: interviews user, creates Jira ticket, then auto-creates matching entries in both Monday.com boards with linked metadata</td><td>Jira + Monday.com (2 boards)</td><td>~30 min</td></tr>
-      <tr><td><code>/createticket</code></td><td>Domain-aware Jira ticket creation across 4 projects (DEAL, DEALR, BDDMD, EMM) with auto-detected custom fields</td><td>Jira (Atlassian MCP)</td><td>~15 min</td></tr>
-      <tr><td><code>/newmondaytask</code></td><td>Creates task in 2 Monday.com boards simultaneously with team mapping, owner resolution, and Jira link embedding</td><td>Monday.com (2 boards, 8 columns each)</td><td>~10 min</td></tr>
-      <tr><td><code>/meetingtoticketsummary</code></td><td>Searches Spinach AI meeting notes, lets user select a meeting &amp; topic, produces Jira-ready structured ticket summary</td><td>Spinach AI MCP</td><td>~20 min</td></tr>
-      <tr><td><code>/weekly-trading-issues-report</code></td><td>Queries Reforge for user complaints, categorizes by severity, generates HTML report with Top 10 issues, emails PDF</td><td>Reforge MCP + Email</td><td>~45 min</td></tr>
-      <tr><td><code>/monthlyDOBanalysis</code></td><td>Runs Databricks SQL for Dealing-on-Book P&amp;L, aggregates by asset class &amp; volume bucket, generates charts &amp; business analysis</td><td>Databricks + Mermaid</td><td>~60 min</td></tr>
-      <tr><td><code>/currentroutingrules</code></td><td>Queries all active CEP routing rules from Databricks, maps HedgeServer-to-LP, presents organized by HSID group</td><td>Databricks</td><td>~20 min</td></tr>
-      <tr><td><code>/updatesnapshot</code></td><td>Runs 15 Databricks queries to capture live production state, diffs against existing skill, updates only changed sections</td><td>Databricks (15 queries)</td><td>~90 min</td></tr>
-      <tr><td><code>/createprd</code></td><td>Guided PRD co-authoring: 3-stage workflow with context gathering, section refinement, and automated reader testing</td><td>Multi-agent (sub-agents)</td><td>~2 hours</td></tr>
-      <tr><td><code>/sync-etoro-design-system</code></td><td>Pulls latest design tokens &amp; component patterns from Figma, diffs against skill, updates tokens.md and SKILL.md</td><td>Figma MCP</td><td>~30 min</td></tr>
-      <tr><td><code>/creatediagram</code></td><td>Analyzes current conversation context, extracts business-level entities &amp; flows, renders Mermaid diagram</td><td>Mermaid MCP</td><td>~15 min</td></tr>
-      <tr><td><code>/updatelocalrepo</code></td><td>Pulls latest changes for all 30+ git repos, reports successes/failures/up-to-date in a clean summary</td><td>Git</td><td>~10 min</td></tr>
+      <tr>
+        <td><code>/newticketflow</code></td>
+        <td>End-to-end: interviews user, creates Jira ticket, then auto-creates matching entries in both Monday.com boards with linked metadata</td>
+        <td>Jira + Monday.com (2 boards)</td>
+        <td>~30 min</td>
+      </tr>
+      <tr>
+        <td><code>/createticket</code></td>
+        <td>Domain-aware Jira ticket creation across 4 projects (DEAL, DEALR, BDDMD, EMM) with auto-detected custom fields</td>
+        <td>Jira (Atlassian MCP)</td>
+        <td>~15 min</td>
+      </tr>
+      <tr>
+        <td><code>/newmondaytask</code></td>
+        <td>Creates task in 2 Monday.com boards simultaneously with team mapping, owner resolution, and Jira link embedding</td>
+        <td>Monday.com (2 boards, 8 columns each)</td>
+        <td>~10 min</td>
+      </tr>
+      <tr>
+        <td><code>/meetingtoticketsummary</code></td>
+        <td>Searches Spinach AI meeting notes, lets user select a meeting &amp; topic, produces Jira-ready structured ticket summary</td>
+        <td>Spinach AI MCP</td>
+        <td>~20 min</td>
+      </tr>
+      <tr>
+        <td><code>/weekly-trading-issues-report</code></td>
+        <td>Queries Reforge for user complaints, categorizes by severity, generates HTML report with Top 10 issues, emails PDF</td>
+        <td>Reforge MCP + Email</td>
+        <td>~45 min</td>
+      </tr>
+      <tr>
+        <td><code>/monthlyDOBanalysis</code></td>
+        <td>Runs Databricks SQL for Dealing-on-Book P&amp;L, aggregates by asset class &amp; volume bucket, generates charts &amp; business analysis</td>
+        <td>Databricks + Mermaid</td>
+        <td>~60 min</td>
+      </tr>
+      <tr>
+        <td><code>/currentroutingrules</code></td>
+        <td>Queries all active CEP routing rules from Databricks, maps HedgeServer-to-LP, presents organized by HSID group</td>
+        <td>Databricks</td>
+        <td>~20 min</td>
+      </tr>
+      <tr>
+        <td><code>/updatesnapshot</code></td>
+        <td>Runs 15 Databricks queries to capture live production state, diffs against existing skill, updates only changed sections</td>
+        <td>Databricks (15 queries)</td>
+        <td>~90 min</td>
+      </tr>
+      <tr>
+        <td><code>/createprd</code></td>
+        <td>Guided PRD co-authoring: 3-stage workflow with context gathering, section refinement, and automated reader testing</td>
+        <td>Multi-agent (sub-agents)</td>
+        <td>~2 hours</td>
+      </tr>
+      <tr>
+        <td><code>/sync-etoro-design-system</code></td>
+        <td>Pulls latest design tokens &amp; component patterns from Figma, diffs against skill, updates tokens.md and SKILL.md</td>
+        <td>Figma MCP</td>
+        <td>~30 min</td>
+      </tr>
+      <tr>
+        <td><code>/creatediagram</code></td>
+        <td>Analyzes current conversation context, extracts business-level entities &amp; flows, renders Mermaid diagram</td>
+        <td>Mermaid MCP</td>
+        <td>~15 min</td>
+      </tr>
+      <tr>
+        <td><code>/updatelocalrepo</code></td>
+        <td>Pulls latest changes for all 30+ git repos, reports successes/failures/up-to-date in a clean summary</td>
+        <td>Git</td>
+        <td>~10 min</td>
+      </tr>
     </tbody>
   </table>
+
   <h3>Example: The Full Ticket Flow</h3>
   <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1rem;">A single <code>/newticketflow</code> command orchestrates this entire sequence:</p>
   <div class="flow-bar">
     <span class="step active">User describes need</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step">AI interviews</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step">Drafts Jira ticket</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step">User approves</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step active">Creates in Jira</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step">Creates in Monday Board 1</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step">Creates in Monday Board 2</span>
-    <span class="arrow">&rarr;</span>
+    <span class="arrow">→</span>
     <span class="step active">Confirms all 3</span>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: RULES -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="rules">
   <div class="section-label">Guardrails &amp; Standards</div>
-  <h2>29 Rules &mdash; AI Behavior Guardrails</h2>
+  <h2>29 Rules — AI Behavior Guardrails</h2>
   <p class="section-desc">Rules run on every interaction, enforcing team standards, triggering impact analysis, and maintaining cross-session memory without manual prompting.</p>
+
   <div class="card-grid card-grid-3">
-    <div class="card"><h4>Always-Active Rules (8)</h4><p>Run on every AI interaction. Include project state memory, auto-update triggers, configuration impact analysis, critical path test coverage validation, PM requirements tracking, service dependency mapping, and flow documentation generation.</p><span class="tag tag-blue">Always On</span></div>
-    <div class="card"><h4>SQL / Database Rules (17)</h4><p>Senior DBA-level code review, formatting standards, temporal table generators, index checkers, dynamic SQL converters, deployment verifiers, performance comparison tools. Includes colleague-specific variants.</p><span class="tag tag-teal">On Demand</span></div>
-    <div class="card"><h4>Platform-Specific Rules (4)</h4><p>EtoroOps configuration screen validator, Jira-to-GitHub branch creator, SQL code review blind test runner, custom commands location enforcement.</p><span class="tag tag-yellow">On Demand</span></div>
+    <div class="card">
+      <h4>Always-Active Rules (8)</h4>
+      <p>Run on every AI interaction. Include project state memory, auto-update triggers, configuration impact analysis, critical path test coverage validation, PM requirements tracking, service dependency mapping, and flow documentation generation.</p>
+      <span class="tag tag-blue">Always On</span>
+    </div>
+    <div class="card">
+      <h4>SQL / Database Rules (17)</h4>
+      <p>Senior DBA-level code review, formatting standards, temporal table generators, index checkers, dynamic SQL converters, deployment verifiers, performance comparison tools. Includes colleague-specific variants.</p>
+      <span class="tag tag-teal">On Demand</span>
+    </div>
+    <div class="card">
+      <h4>Platform-Specific Rules (4)</h4>
+      <p>EtoroOps configuration screen validator, Jira-to-GitHub branch creator, SQL code review blind test runner, custom commands location enforcement.</p>
+      <span class="tag tag-yellow">On Demand</span>
+    </div>
   </div>
+
   <h3>Key Always-Active Rules</h3>
   <table>
     <thead><tr><th>Rule</th><th>What It Does</th><th>Business Value</th></tr></thead>
     <tbody>
-      <tr><td><code>auto-update-project-state</code></td><td>Silently updates a persistent state file after every meaningful interaction &mdash; captures decisions, investigations, open questions, and next steps</td><td>Eliminates knowledge loss between AI sessions; any new session picks up exactly where the last one left off</td></tr>
-      <tr><td><code>config-change-impact</code></td><td>Automatically analyzes proposed configuration changes, maps affected services, rates impact level, generates deployment checklist</td><td>Prevents production incidents from unvalidated config changes in a 30+ service architecture</td></tr>
-      <tr><td><code>critical-path-testing</code></td><td>Validates that all critical order execution paths have comprehensive unit, integration, and E2E test coverage</td><td>Ensures regulatory-critical trade execution paths are never shipped with coverage gaps</td></tr>
-      <tr><td><code>service-dependency-mapper</code></td><td>Auto-generates architecture diagrams, dependency matrices, and blast-radius analysis for any service change</td><td>Reduces cross-team coordination overhead; makes impact of changes immediately visible</td></tr>
-      <tr><td><code>pm-requirements-tracker</code></td><td>Structured templates for feature requests, release planning, decision logs, and stakeholder communications</td><td>Standardizes PM outputs; every requirement follows the same rigorous format</td></tr>
+      <tr>
+        <td><code>auto-update-project-state</code></td>
+        <td>Silently updates a persistent state file after every meaningful interaction — captures decisions, investigations, open questions, and next steps</td>
+        <td>Eliminates knowledge loss between AI sessions; any new session picks up exactly where the last one left off</td>
+      </tr>
+      <tr>
+        <td><code>config-change-impact</code></td>
+        <td>Automatically analyzes proposed configuration changes, maps affected services, rates impact level, generates deployment checklist</td>
+        <td>Prevents production incidents from unvalidated config changes in a 30+ service architecture</td>
+      </tr>
+      <tr>
+        <td><code>critical-path-testing</code></td>
+        <td>Validates that all critical order execution paths have comprehensive unit, integration, and E2E test coverage</td>
+        <td>Ensures regulatory-critical trade execution paths are never shipped with coverage gaps</td>
+      </tr>
+      <tr>
+        <td><code>service-dependency-mapper</code></td>
+        <td>Auto-generates architecture diagrams, dependency matrices, and blast-radius analysis for any service change</td>
+        <td>Reduces cross-team coordination overhead; makes impact of changes immediately visible</td>
+      </tr>
+      <tr>
+        <td><code>pm-requirements-tracker</code></td>
+        <td>Structured templates for feature requests, release planning, decision logs, and stakeholder communications</td>
+        <td>Standardizes PM outputs; every requirement follows the same rigorous format</td>
+      </tr>
     </tbody>
   </table>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: AUTOMATIONS -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="automations">
   <div class="section-label">Unattended Automation</div>
-  <h2>6 Scheduled Jobs &mdash; Work That Happens Without You</h2>
+  <h2>7 Scheduled Jobs — Work That Happens Without You</h2>
   <p class="section-desc">macOS LaunchAgents run background tasks on schedule, generating reports, refreshing credentials, and syncing repositories. A self-monitoring weekly report tracks all job health.</p>
+
   <div class="card-grid">
-    <div class="card"><div class="icon">&#128202;</div><h4>Weekly Trading Issues Report</h4><p>Every Monday at 9:30 AM: queries Reforge MCP for user complaints, categorizes by severity (P0-P3), generates HTML report, converts to PDF, emails to stakeholder. Fully unattended.</p><span class="tag tag-orange">Mon 9:30 AM</span></div>
-    <div class="card"><div class="icon">&#128230;</div><h4>Auto-Pull All Repositories</h4><p>Every Monday at 9:00 AM: runs <code>git pull</code> on all 30+ local repos, logs successes/failures. Ensures the workspace starts the week with the latest code.</p><span class="tag tag-orange">Mon 9:00 AM</span></div>
-    <div class="card"><div class="icon">&#127912;</div><h4>Figma Design Sync Reminder</h4><p>Every Monday at 10:00 AM: macOS notification reminding to run <code>/sync-etoro-design-system</code> to pull latest design tokens from Figma.</p><span class="tag tag-orange">Mon 10:00 AM</span></div>
-    <div class="card"><div class="icon">&#128273;</div><h4>Databricks Token Refresh</h4><p>Every 30 minutes: refreshes Azure AD token for Databricks SQL access. Prevents query failures from expired credentials during analysis commands.</p><span class="tag tag-orange">Every 30 min</span></div>
-    <div class="card"><div class="icon">&#128203;</div><h4>Weekly Job Report</h4><p>Every Sunday at 6:00 PM: parses all job logs from the past 7 days, generates a health dashboard HTML report, shows macOS notification, opens in browser. Self-monitoring system.</p><span class="tag tag-orange">Sun 6:00 PM</span></div>
-    <div class="card"><div class="icon">&#127908;</div><h4>Daily AI Podcast</h4><p>Daily generation of personalized AI/tech briefing content.</p><span class="tag tag-orange">Daily</span></div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h4>Weekly Trading Issues Report</h4>
+      <p>Every Monday at 9:30 AM: queries Reforge MCP for user complaints, categorizes by severity (P0-P3), generates HTML report, converts to PDF, emails to stakeholder. Fully unattended.</p>
+      <span class="tag tag-orange">Mon 9:30 AM</span>
+    </div>
+    <div class="card">
+      <div class="icon">📦</div>
+      <h4>Auto-Pull All Repositories</h4>
+      <p>Every Monday at 9:00 AM: runs <code>git pull</code> on all 30+ local repos, logs successes/failures. Ensures the workspace starts the week with the latest code.</p>
+      <span class="tag tag-orange">Mon 9:00 AM</span>
+    </div>
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h4>Figma Design Sync Reminder</h4>
+      <p>Every Monday at 10:00 AM: macOS notification reminding to run <code>/sync-etoro-design-system</code> to pull latest design tokens from Figma.</p>
+      <span class="tag tag-orange">Mon 10:00 AM</span>
+    </div>
+    <div class="card">
+      <div class="icon">🔑</div>
+      <h4>Databricks Token Refresh</h4>
+      <p>Every 30 minutes: refreshes Azure AD token for Databricks SQL access. Prevents query failures from expired credentials during analysis commands.</p>
+      <span class="tag tag-orange">Every 30 min</span>
+    </div>
+    <div class="card">
+      <div class="icon">📋</div>
+      <h4>Weekly Job Report</h4>
+      <p>Every Sunday at 6:00 PM: parses all job logs from the past 7 days, generates a health dashboard HTML report, shows macOS notification, opens in browser. Self-monitoring system.</p>
+      <span class="tag tag-orange">Sun 6:00 PM</span>
+    </div>
+    <div class="card">
+      <div class="icon">🎙️</div>
+      <h4>Daily AI Podcast</h4>
+      <p>Daily generation of personalized AI/tech briefing content.</p>
+      <span class="tag tag-orange">Daily 10:00 AM</span>
+    </div>
+    <div class="card">
+      <div class="icon">📰</div>
+      <h4>Daily Trading Industry Briefing</h4>
+      <p>Every day at 10:05 AM: Claude Code CLI runs 5 targeted web searches for competitor news (Robinhood, Coinbase, Trade Republic, Kraken, XTB, neobrokers), compiles a 5-story briefing with eToro-specific competitive analysis, generates an audio podcast via NotebookLM, and emails the text + audio link to stakeholder. Fully automated competitive intelligence pipeline.</p>
+      <span class="tag tag-orange">Daily 10:05 AM</span>
+    </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: INTEGRATIONS -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="integrations">
   <div class="section-label">Connected Ecosystem</div>
-  <h2>10 MCP Integrations &mdash; The AI Talks to Your Tools</h2>
-  <p class="section-desc">Model Context Protocol (MCP) lets the AI agent directly read from and write to external tools &mdash; no copy-paste, no browser tabs, no context switching.</p>
+  <h2>10 MCP Integrations — The AI Talks to Your Tools</h2>
+  <p class="section-desc">Model Context Protocol (MCP) lets the AI agent directly read from and write to external tools — no copy-paste, no browser tabs, no context switching.</p>
+
   <table>
     <thead><tr><th>Integration</th><th>Capabilities</th><th>Used By Commands</th></tr></thead>
     <tbody>
-      <tr><td><strong>Atlassian (Jira)</strong></td><td>Create/edit/search issues, get issue metadata, list projects, manage fields</td><td><code>/createticket</code>, <code>/newticketflow</code></td></tr>
-      <tr><td><strong>Monday.com</strong></td><td>Create items, set column values, manage boards, look up users</td><td><code>/newmondaytask</code>, <code>/newticketflow</code></td></tr>
-      <tr><td><strong>Figma</strong></td><td>Get design context, metadata, variables, screenshots; create Code Connect mappings</td><td><code>/sync-etoro-design-system</code>, UI prototyping</td></tr>
-      <tr><td><strong>Mixpanel</strong></td><td>Run segmentation, funnels, retention, frequency, flow analyses on production events</td><td>Ad-hoc analytics queries</td></tr>
-      <tr><td><strong>Databricks</strong></td><td>Execute SQL against Data Lake (dealing, trading, market data tables), poll results</td><td><code>/monthlyDOBanalysis</code>, <code>/updatesnapshot</code>, <code>/currentroutingrules</code></td></tr>
-      <tr><td><strong>Spinach AI</strong></td><td>Search and fetch meeting transcripts, action items, key decisions from 100+ meetings</td><td><code>/meetingtoticketsummary</code></td></tr>
-      <tr><td><strong>Reforge Insights</strong></td><td>Search user feedback snippets by topic, workspace-wide analysis</td><td><code>/weekly-trading-issues-report</code></td></tr>
-      <tr><td><strong>GitHub</strong></td><td>Manage PRs, issues, branches, reviews across all 30+ repos</td><td>PR creation, branch management</td></tr>
-      <tr><td><strong>Mermaid</strong></td><td>Generate diagrams (sequence, flow, state, timeline) as PNG/SVG/file</td><td><code>/creatediagram</code>, <code>/monthlyDOBanalysis</code></td></tr>
-      <tr><td><strong>eToro Internal APIs</strong></td><td>Access internal service documentation and API specs via dev-local MCP</td><td>Architecture research, API exploration</td></tr>
+      <tr>
+        <td><strong>Atlassian (Jira)</strong></td>
+        <td>Create/edit/search issues, get issue metadata, list projects, manage fields</td>
+        <td><code>/createticket</code>, <code>/newticketflow</code></td>
+      </tr>
+      <tr>
+        <td><strong>Monday.com</strong></td>
+        <td>Create items, set column values, manage boards, look up users</td>
+        <td><code>/newmondaytask</code>, <code>/newticketflow</code></td>
+      </tr>
+      <tr>
+        <td><strong>Figma</strong></td>
+        <td>Get design context, metadata, variables, screenshots; create Code Connect mappings</td>
+        <td><code>/sync-etoro-design-system</code>, UI prototyping</td>
+      </tr>
+      <tr>
+        <td><strong>Mixpanel</strong></td>
+        <td>Run segmentation, funnels, retention, frequency, flow analyses on production events</td>
+        <td>Ad-hoc analytics queries</td>
+      </tr>
+      <tr>
+        <td><strong>Databricks</strong></td>
+        <td>Execute SQL against Data Lake (dealing, trading, market data tables), poll results</td>
+        <td><code>/monthlyDOBanalysis</code>, <code>/updatesnapshot</code>, <code>/currentroutingrules</code></td>
+      </tr>
+      <tr>
+        <td><strong>Spinach AI</strong></td>
+        <td>Search and fetch meeting transcripts, action items, key decisions from 100+ meetings</td>
+        <td><code>/meetingtoticketsummary</code></td>
+      </tr>
+      <tr>
+        <td><strong>Reforge Insights</strong></td>
+        <td>Search user feedback snippets by topic, workspace-wide analysis</td>
+        <td><code>/weekly-trading-issues-report</code></td>
+      </tr>
+      <tr>
+        <td><strong>GitHub</strong></td>
+        <td>Manage PRs, issues, branches, reviews across all 30+ repos</td>
+        <td>PR creation, branch management</td>
+      </tr>
+      <tr>
+        <td><strong>Mermaid</strong></td>
+        <td>Generate diagrams (sequence, flow, state, timeline) as PNG/SVG/file</td>
+        <td><code>/creatediagram</code>, <code>/monthlyDOBanalysis</code></td>
+      </tr>
+      <tr>
+        <td><strong>eToro Internal APIs</strong></td>
+        <td>Access internal service documentation and API specs via dev-local MCP</td>
+        <td>Architecture research, API exploration</td>
+      </tr>
     </tbody>
   </table>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: PAST USAGE -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="usage">
   <div class="section-label">Track Record</div>
-  <h2>Real Work Produced &mdash; March&ndash;April 2026</h2>
+  <h2>Real Work Produced — March–April 2026</h2>
   <p class="section-desc">Documented examples of actual business outputs generated through this setup in the past 2 weeks of active use.</p>
+
   <div class="metric-row">
     <div class="metric-card"><div class="num blue">8</div><div class="label">Jira Tickets Created</div></div>
     <div class="metric-card"><div class="num green">16</div><div class="label">Monday.com Items Synced</div></div>
     <div class="metric-card"><div class="num purple">~38,000</div><div class="label">Reforge Snippets Analyzed</div></div>
     <div class="metric-card"><div class="num orange">11</div><div class="label">Mixpanel Queries Run</div></div>
   </div>
+
   <h3>Tickets Created via AI Workflow</h3>
   <table>
     <thead><tr><th>Ticket</th><th>Summary</th><th>Source</th></tr></thead>
     <tbody>
-      <tr><td>DEAL-11914</td><td>Exposure$ column sign flip bug &mdash; display-only fix for USD sell-currency instruments</td><td>Open Investigations meeting</td></tr>
-      <tr><td>DEAL-11920</td><td>Unmanaged Execution Mode Toggle &mdash; new desk-level radio button</td><td>Architecture investigation</td></tr>
-      <tr><td>DEAL-11927</td><td>Provider Master Entity Grouping &mdash; replace fake multi-ticker workaround</td><td>Spinach meeting notes</td></tr>
-      <tr><td>DEAL-11931</td><td>Talos Internal Market Pricing for Crypto &mdash; phased rollout</td><td>Spinach meeting notes</td></tr>
-      <tr><td>DEAL-11942</td><td>BVI Regulation-Aware Custody Routing &mdash; auto-reroute on regulation change</td><td>Marketing/BVI meeting</td></tr>
+      <tr><td>DEAL-11914</td><td>Exposure$ column sign flip bug — display-only fix for USD sell-currency instruments</td><td>Open Investigations meeting</td></tr>
+      <tr><td>DEAL-11920</td><td>Unmanaged Execution Mode Toggle — new desk-level radio button</td><td>Architecture investigation</td></tr>
+      <tr><td>DEAL-11927</td><td>Provider Master Entity Grouping — replace fake multi-ticker workaround</td><td>Spinach meeting notes</td></tr>
+      <tr><td>DEAL-11931</td><td>Talos Internal Market Pricing for Crypto — phased rollout</td><td>Spinach meeting notes</td></tr>
+      <tr><td>DEAL-11942</td><td>BVI Regulation-Aware Custody Routing — auto-reroute on regulation change</td><td>Marketing/BVI meeting</td></tr>
       <tr><td>DEAL-11950</td><td>Horizon API recon reads wrong field (qtyToHedge vs qtyResidual)</td><td>Bug investigation</td></tr>
       <tr><td>DEAL-11951</td><td>Manual trigger button for Horizon API reconciliation</td><td>Operational need</td></tr>
       <tr><td>DEAL-11956</td><td>SL/TP fallback flow for real futures with hybrid execution</td><td>Futures clarification meeting</td></tr>
     </tbody>
   </table>
+
   <h3>Deep Investigations Conducted</h3>
   <div class="timeline">
-    <div class="timeline-item"><div class="timeline-date">March 31, 2026</div><div class="timeline-title">Mixpanel Low-Touch Trading Funnel Deep-Dive</div><div class="timeline-desc">11 queries across funnels, flows, segmentation. Key finding: whole-share stocks convert 10pp below baseline (54% vs 64%), mobile close-trade click&rarr;attempt is 14% (half of desktop), 79% of market page viewers never open a trade card.</div></div>
-    <div class="timeline-item"><div class="timeline-date">March 31, 2026</div><div class="timeline-title">Tax Report Competitive Analysis</div><div class="timeline-desc">150+ Reforge snippets analyzed across 7 categories. Built competitive analysis vs IBKR, Robinhood, Trading 212, Wealthsimple. Created 3-tier monetization model ($7.2M/yr projected incremental revenue).</div></div>
-    <div class="timeline-item"><div class="timeline-date">April 1, 2026</div><div class="timeline-title">First Automated Weekly Trading Issues Report</div><div class="timeline-desc">~37,900 snippets analyzed across 5 query categories. Top 10 issues identified and ranked by severity. Report auto-generated, converted to PDF, and emailed to stakeholder.</div></div>
-    <div class="timeline-item"><div class="timeline-date">March 29, 2026</div><div class="timeline-title">CEP UI Prototype</div><div class="timeline-desc">Full HTML prototype of modernized dealing desk CEP routing interface &mdash; 7 views (Dashboard, Route Positions wizard, Shadow Hedge, CES Exposures, Hedge Reasons, Audit Log, Settings) built using eToro design tokens pulled from Figma.</div></div>
-    <div class="timeline-item"><div class="timeline-date">March 24&ndash;25, 2026</div><div class="timeline-title">Instrument Insertion Field Mapping (4 Reference Docs)</div><div class="timeline-desc">Extracted all 95 insertion fields from production SPs, mapped to DB tables across 4 databases, documented old vs new infra differences. Created canonical reference for the entire instrument onboarding pipeline.</div></div>
-    <div class="timeline-item"><div class="timeline-date">March 25, 2026</div><div class="timeline-title">Low Touch &rarr; High Touch Transition Tool Mockup</div><div class="timeline-desc">Interactive HTML prototype with 4 views, incorporates full 3-way field comparison (2 renamed, 19 hardcoded, 27 dropped, 22 new fields, 8 structural changes), validation reports, audit trail, domain-by-domain execution progress.</div></div>
+    <div class="timeline-item">
+      <div class="timeline-date">March 31, 2026</div>
+      <div class="timeline-title">Mixpanel Low-Touch Trading Funnel Deep-Dive</div>
+      <div class="timeline-desc">11 queries across funnels, flows, segmentation. Key finding: whole-share stocks convert 10pp below baseline (54% vs 64%), mobile close-trade click→attempt is 14% (half of desktop), 79% of market page viewers never open a trade card.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">March 31, 2026</div>
+      <div class="timeline-title">Tax Report Competitive Analysis</div>
+      <div class="timeline-desc">150+ Reforge snippets analyzed across 7 categories. Built competitive analysis vs IBKR, Robinhood, Trading 212, Wealthsimple. Created 3-tier monetization model ($7.2M/yr projected incremental revenue).</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">April 1, 2026</div>
+      <div class="timeline-title">First Automated Weekly Trading Issues Report</div>
+      <div class="timeline-desc">~37,900 snippets analyzed across 5 query categories. Top 10 issues identified and ranked by severity. Report auto-generated, converted to PDF, and emailed to stakeholder.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">March 29, 2026</div>
+      <div class="timeline-title">CEP UI Prototype</div>
+      <div class="timeline-desc">Full HTML prototype of modernized dealing desk CEP routing interface — 7 views (Dashboard, Route Positions wizard, Shadow Hedge, CES Exposures, Hedge Reasons, Audit Log, Settings) built using eToro design tokens pulled from Figma.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">March 24–25, 2026</div>
+      <div class="timeline-title">Instrument Insertion Field Mapping (4 Reference Docs)</div>
+      <div class="timeline-desc">Extracted all 95 insertion fields from production SPs, mapped to DB tables across 4 databases, documented old vs new infra differences. Created canonical reference for the entire instrument onboarding pipeline.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">March 25, 2026</div>
+      <div class="timeline-title">Low Touch → High Touch Transition Tool Mockup</div>
+      <div class="timeline-desc">Interactive HTML prototype with 4 views, incorporates full 3-way field comparison (2 renamed, 19 hardcoded, 27 dropped, 22 new fields, 8 structural changes), validation reports, audit trail, domain-by-domain execution progress.</div>
+    </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: BUSINESS CASE -->
+<!-- ═══════════════════════════════════════════ -->
 <section id="business-case">
   <div class="section-label">Business Impact</div>
   <h2>The Business Case for an AI-Augmented TPM</h2>
-  <p class="section-desc">This setup transforms how a single TPM operates &mdash; from manual context-switching between 10+ tools to orchestrated, AI-assisted workflows with persistent institutional knowledge.</p>
+  <p class="section-desc">This setup transforms how a single TPM operates — from manual context-switching between 10+ tools to orchestrated, AI-assisted workflows with persistent institutional knowledge.</p>
+
   <h3>Productivity Multipliers</h3>
   <div class="card-grid card-grid-3">
-    <div class="card"><h4>Context Switching &rarr; Zero</h4><p>Instead of: open Jira &rarr; fill fields &rarr; open Monday &rarr; fill fields &rarr; copy link &rarr; paste. Now: <code>/newticketflow</code> does all three in one interaction. The AI knows the right project, fields, and board mappings.</p><span class="tag tag-green">10x faster</span></div>
-    <div class="card"><h4>Meeting Notes &rarr; Action Items</h4><p>Instead of: re-read 30-min transcript &rarr; extract relevant points &rarr; draft ticket. Now: <code>/meetingtoticketsummary</code> searches 100+ meetings, extracts decisions, produces Jira-ready output.</p><span class="tag tag-green">5x faster</span></div>
-    <div class="card"><h4>Production Queries &rarr; Business Reports</h4><p>Instead of: write SQL &rarr; run in Databricks &rarr; export &rarr; format in Excel &rarr; add analysis. Now: <code>/monthlyDOBanalysis</code> runs the query, aggregates, charts, and writes the business narrative.</p><span class="tag tag-green">15x faster</span></div>
+    <div class="card">
+      <h4>Context Switching → Zero</h4>
+      <p>Instead of: open Jira → fill fields → open Monday → fill fields → copy link → paste. Now: <code>/newticketflow</code> does all three in one interaction. The AI knows the right project, fields, and board mappings.</p>
+      <span class="tag tag-green">10x faster</span>
+    </div>
+    <div class="card">
+      <h4>Meeting Notes → Action Items</h4>
+      <p>Instead of: re-read 30-min transcript → extract relevant points → draft ticket. Now: <code>/meetingtoticketsummary</code> searches 100+ meetings, extracts decisions, produces Jira-ready output.</p>
+      <span class="tag tag-green">5x faster</span>
+    </div>
+    <div class="card">
+      <h4>Production Queries → Business Reports</h4>
+      <p>Instead of: write SQL → run in Databricks → export → format in Excel → add analysis. Now: <code>/monthlyDOBanalysis</code> runs the query, aggregates, charts, and writes the business narrative.</p>
+      <span class="tag tag-green">15x faster</span>
+    </div>
   </div>
+
   <h3>Estimated Weekly Time Savings</h3>
   <table>
     <thead><tr><th>Activity</th><th>Before (Manual)</th><th>After (AI-Assisted)</th><th>Weekly Saving</th></tr></thead>
     <tbody>
       <tr><td>Ticket creation &amp; board sync (3-4 tickets/week)</td><td>~2 hours</td><td>~20 minutes</td><td><strong>1.5 hours</strong></td></tr>
-      <tr><td>Meeting &rarr; action item extraction (2 meetings/week)</td><td>~1.5 hours</td><td>~15 minutes</td><td><strong>1.25 hours</strong></td></tr>
+      <tr><td>Meeting → action item extraction (2 meetings/week)</td><td>~1.5 hours</td><td>~15 minutes</td><td><strong>1.25 hours</strong></td></tr>
       <tr><td>Weekly trading issues report</td><td>~45 minutes</td><td>Automated (0 min)</td><td><strong>45 minutes</strong></td></tr>
       <tr><td>Production data queries &amp; analysis</td><td>~3 hours</td><td>~30 minutes</td><td><strong>2.5 hours</strong></td></tr>
-      <tr><td>Cross-session context recovery</td><td>~30 min/session &times; 5</td><td>Automatic (0 min)</td><td><strong>2.5 hours</strong></td></tr>
+      <tr><td>Cross-session context recovery</td><td>~30 min/session × 5</td><td>Automatic (0 min)</td><td><strong>2.5 hours</strong></td></tr>
       <tr><td>PRD / spec authoring</td><td>~4 hours/doc</td><td>~1.5 hours/doc</td><td><strong>2.5 hours</strong></td></tr>
       <tr><td>Architecture &amp; dependency documentation</td><td>~2 hours</td><td>~15 minutes</td><td><strong>1.75 hours</strong></td></tr>
       <tr><td>Repository maintenance (30+ repos)</td><td>~30 minutes</td><td>Automated (0 min)</td><td><strong>30 minutes</strong></td></tr>
-      <tr style="background:var(--accent-dim);"><td><strong>Total Weekly Savings</strong></td><td></td><td></td><td><strong style="color:var(--green);font-size:1.1rem;">~13 hours/week</strong></td></tr>
+      <tr style="background:var(--accent-dim);">
+        <td><strong>Total Weekly Savings</strong></td>
+        <td></td>
+        <td></td>
+        <td><strong style="color:var(--green);font-size:1.1rem;">~13 hours/week</strong></td>
+      </tr>
     </tbody>
   </table>
+
   <div class="callout green">
     <strong>13 hours/week reclaimed</strong> means the TPM spends roughly 30% less time on operational mechanics and 30% more time on strategic product thinking: stakeholder alignment, trade-off analysis, architectural decisions, and roadmap prioritization.
   </div>
+
   <h3>Qualitative Business Benefits</h3>
   <div class="card-grid">
-    <div class="card"><div class="icon">&#128274;</div><h4>Institutional Knowledge Retention</h4><p>14 skill files encode knowledge that would otherwise exist only in one person's head. If the TPM is unavailable, anyone with this setup can get expert-level answers about dealing execution, trading flows, or data structures.</p></div>
-    <div class="card"><div class="icon">&#128207;</div><h4>Consistent Quality Standards</h4><p>29 rules enforce the same code review standards, configuration impact analysis, test coverage requirements, and documentation format on every interaction. No more "it depends who reviewed it."</p></div>
-    <div class="card"><div class="icon">&#128260;</div><h4>Cross-Session Continuity</h4><p>The auto-update project state rule means every AI session begins with full awareness of recent decisions, open questions, active branches, and investigations. Zero ramp-up time between sessions.</p></div>
-    <div class="card"><div class="icon">&#128225;</div><h4>Proactive Issue Detection</h4><p>Automated weekly analysis of ~38,000 user feedback snippets surfaces trading issues before they become escalations. The report arrives in the inbox before the Monday standup.</p></div>
-    <div class="card"><div class="icon">&#127959;</div><h4>Rapid Prototyping</h4><p>Design-system-aware AI generates pixel-accurate HTML prototypes of new features (CEP UI, Low-Touch transition tool, tax report dashboard) using actual eToro design tokens &mdash; in minutes, not days.</p></div>
-    <div class="card"><div class="icon">&#128202;</div><h4>Data-Driven Product Decisions</h4><p>Direct access to Mixpanel analytics and Databricks production data from within the AI assistant means product decisions are backed by real numbers, not assumptions.</p></div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h4>Institutional Knowledge Retention</h4>
+      <p>14 skill files encode knowledge that would otherwise exist only in one person's head. If the TPM is unavailable, anyone with this setup can get expert-level answers about dealing execution, trading flows, or data structures.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📏</div>
+      <h4>Consistent Quality Standards</h4>
+      <p>29 rules enforce the same code review standards, configuration impact analysis, test coverage requirements, and documentation format on every interaction. No more "it depends who reviewed it."</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔄</div>
+      <h4>Cross-Session Continuity</h4>
+      <p>The auto-update project state rule means every AI session begins with full awareness of recent decisions, open questions, active branches, and investigations. Zero ramp-up time between sessions.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📡</div>
+      <h4>Proactive Issue Detection</h4>
+      <p>Automated weekly analysis of ~38,000 user feedback snippets surfaces trading issues before they become escalations. The report arrives in the inbox before the Monday standup.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏗️</div>
+      <h4>Rapid Prototyping</h4>
+      <p>Design-system-aware AI generates pixel-accurate HTML prototypes of new features (CEP UI, Low-Touch transition tool, tax report dashboard) using actual eToro design tokens — in minutes, not days.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h4>Data-Driven Product Decisions</h4>
+      <p>Direct access to Mixpanel analytics and Databricks production data from within the AI assistant means product decisions are backed by real numbers, not assumptions.</p>
+    </div>
   </div>
+
   <h3>What Makes This Different From "Using ChatGPT"</h3>
   <table>
     <thead><tr><th>Dimension</th><th>Generic AI Chat</th><th>This Cursor Setup</th></tr></thead>
     <tbody>
-      <tr><td>Domain knowledge</td><td>Starts from zero every session</td><td>14 skill files with deep eToro platform knowledge always loaded</td></tr>
-      <tr><td>Memory</td><td>Forgets everything between chats</td><td>Auto-persisted project state across all sessions</td></tr>
-      <tr><td>Tool access</td><td>Can only generate text</td><td>Creates Jira tickets, Monday tasks, queries Databricks, searches Mixpanel, reads Figma</td></tr>
-      <tr><td>Quality guardrails</td><td>No enforcement</td><td>29 rules enforce standards on every interaction</td></tr>
-      <tr><td>Automation</td><td>Manual trigger only</td><td>6 scheduled jobs run unattended</td></tr>
-      <tr><td>Personalization</td><td>Generic tone</td><td>Matches TPM's writing voice, structural preferences, and domain vocabulary</td></tr>
-      <tr><td>Multi-step workflows</td><td>One prompt &rarr; one output</td><td>Single command orchestrates 3-8 tool calls across multiple services</td></tr>
+      <tr>
+        <td>Domain knowledge</td>
+        <td>Starts from zero every session</td>
+        <td>14 skill files with deep eToro platform knowledge always loaded</td>
+      </tr>
+      <tr>
+        <td>Memory</td>
+        <td>Forgets everything between chats</td>
+        <td>Auto-persisted project state across all sessions</td>
+      </tr>
+      <tr>
+        <td>Tool access</td>
+        <td>Can only generate text</td>
+        <td>Creates Jira tickets, Monday tasks, queries Databricks, searches Mixpanel, reads Figma</td>
+      </tr>
+      <tr>
+        <td>Quality guardrails</td>
+        <td>No enforcement</td>
+        <td>29 rules enforce standards on every interaction</td>
+      </tr>
+      <tr>
+        <td>Automation</td>
+        <td>Manual trigger only</td>
+        <td>7 scheduled jobs run unattended</td>
+      </tr>
+      <tr>
+        <td>Personalization</td>
+        <td>Generic tone</td>
+        <td>Matches TPM's writing voice, structural preferences, and domain vocabulary</td>
+      </tr>
+      <tr>
+        <td>Multi-step workflows</td>
+        <td>One prompt → one output</td>
+        <td>Single command orchestrates 3-8 tool calls across multiple services</td>
+      </tr>
     </tbody>
   </table>
 </section>
+
+<!-- FOOTER -->
 <footer>
-  <p>AI-Augmented TPM Workflow &mdash; Cursor Setup Walkthrough<br>
+  <p>AI-Augmented TPM Workflow — Cursor Setup Walkthrough<br>
   Generated April 5, 2026 &nbsp;|&nbsp; Michael Portnov &nbsp;|&nbsp; eToro Trading Platform &amp; Dealing Engines</p>
 </footer>
+
 </body>
 </html>
