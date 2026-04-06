@@ -726,6 +726,114 @@
   </table>
 </section>
 
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION: TIME SAVINGS & COMPARISON -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="business-case">
+  <h3>Estimated Weekly Time Savings</h3>
+  <table>
+    <thead><tr><th>Activity</th><th>Before (Manual)</th><th>After (AI-Assisted)</th><th>Weekly Saving</th></tr></thead>
+    <tbody>
+      <tr><td>Ticket creation &amp; board sync (3-4 tickets/week)</td><td>~2 hours</td><td>~20 minutes</td><td><strong>1.5 hours</strong></td></tr>
+      <tr><td>Meeting → action item extraction (2 meetings/week)</td><td>~1.5 hours</td><td>~15 minutes</td><td><strong>1.25 hours</strong></td></tr>
+      <tr><td>Weekly trading issues report</td><td>~45 minutes</td><td>Automated (0 min)</td><td><strong>45 minutes</strong></td></tr>
+      <tr><td>Production data queries &amp; analysis</td><td>~3 hours</td><td>~30 minutes</td><td><strong>2.5 hours</strong></td></tr>
+      <tr><td>Cross-session context recovery</td><td>~30 min/session × 5</td><td>Automatic (0 min)</td><td><strong>2.5 hours</strong></td></tr>
+      <tr><td>PRD / spec authoring</td><td>~4 hours/doc</td><td>~1.5 hours/doc</td><td><strong>2.5 hours</strong></td></tr>
+      <tr><td>Architecture &amp; dependency documentation</td><td>~2 hours</td><td>~15 minutes</td><td><strong>1.75 hours</strong></td></tr>
+      <tr><td>Repository maintenance (30+ repos)</td><td>~30 minutes</td><td>Automated (0 min)</td><td><strong>30 minutes</strong></td></tr>
+      <tr><td>Daily volume reporting &amp; distribution</td><td>~45 min/day × 5</td><td>Automated (0 min)</td><td><strong>3.75 hours</strong></td></tr>
+      <tr><td>CEP routing rule change detection</td><td>~20 min/day × 5</td><td>Automated (0 min)</td><td><strong>1.5 hours</strong></td></tr>
+      <tr><td>Architecture snapshot &amp; skill sync</td><td>~90 min/week</td><td>Automated (0 min)</td><td><strong>1.5 hours</strong></td></tr>
+      <tr><td>Monthly DOB P&amp;L analysis</td><td>~60 min/month</td><td>Automated (0 min)</td><td><strong>15 min (avg)</strong></td></tr>
+      <tr><td>Cross-project dependency tracking &amp; stale ticket follow-up</td><td>~2 hours/month</td><td>Automated (0 min)</td><td><strong>30 min (avg)</strong></td></tr>
+      <tr><td>Competitive intelligence &amp; complaint trend analysis</td><td>~3 hours/month</td><td>Automated (0 min)</td><td><strong>45 min (avg)</strong></td></tr>
+      <tr style="background:var(--accent-dim);">
+        <td><strong>Total Weekly Savings</strong></td>
+        <td></td>
+        <td></td>
+        <td><strong style="color:var(--green);font-size:1.1rem;">~21 hours/week</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Qualitative Business Benefits</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h4>Institutional Knowledge Retention</h4>
+      <p>14 skill files encode knowledge that would otherwise exist only in one person's head. If the PM is unavailable, anyone with this setup can get expert-level answers about dealing execution, trading flows, or data structures.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📏</div>
+      <h4>Consistent Quality Standards</h4>
+      <p>29 rules enforce the same code review standards, configuration impact analysis, test coverage requirements, and documentation format on every interaction. No more "it depends who reviewed it."</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔄</div>
+      <h4>Cross-Session Continuity</h4>
+      <p>The auto-update project state rule means every AI session begins with full awareness of recent decisions, open questions, active branches, and investigations. Zero ramp-up time between sessions.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📡</div>
+      <h4>Proactive Issue Detection</h4>
+      <p>Automated weekly analysis of ~38,000 user feedback snippets surfaces trading issues before they become escalations. The report arrives in the inbox before the Monday standup.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏗️</div>
+      <h4>Rapid Prototyping</h4>
+      <p>Design-system-aware AI generates pixel-accurate HTML prototypes of new features (CEP UI, Low-Touch transition tool, tax report dashboard) using actual eToro design tokens — in minutes, not days.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h4>Data-Driven Product Decisions</h4>
+      <p>Direct access to Mixpanel analytics and Databricks production data from within the AI assistant means product decisions are backed by real numbers, not assumptions.</p>
+    </div>
+  </div>
+
+  <h3>What Makes This Different From "Using ChatGPT"</h3>
+  <table>
+    <thead><tr><th>Dimension</th><th>Generic AI Chat</th><th>This Cursor Setup</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Domain knowledge</td>
+        <td>Starts from zero every session</td>
+        <td>14 skill files with deep eToro platform knowledge always loaded</td>
+      </tr>
+      <tr>
+        <td>Memory</td>
+        <td>Forgets everything between chats</td>
+        <td>Auto-persisted project state across all sessions</td>
+      </tr>
+      <tr>
+        <td>Tool access</td>
+        <td>Can only generate text</td>
+        <td>Creates Jira tickets, Monday tasks, queries Databricks, searches Mixpanel, reads Figma</td>
+      </tr>
+      <tr>
+        <td>Quality guardrails</td>
+        <td>No enforcement</td>
+        <td>29 rules enforce standards on every interaction</td>
+      </tr>
+      <tr>
+        <td>Automation</td>
+        <td>Manual trigger only</td>
+        <td>13 scheduled jobs run unattended</td>
+      </tr>
+      <tr>
+        <td>Personalization</td>
+        <td>Generic tone</td>
+        <td>Matches PM's writing voice, structural preferences, and domain vocabulary</td>
+      </tr>
+      <tr>
+        <td>Multi-step workflows</td>
+        <td>One prompt → one output</td>
+        <td>Single command orchestrates 3-8 tool calls across multiple services</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <p>AI-Augmented PM Workflow — Cursor Setup Walkthrough<br>
