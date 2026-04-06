@@ -233,9 +233,9 @@
   <div class="hero-stats">
     <div class="hero-stat"><div class="num">14</div><div class="label">Domain Skills</div></div>
     <div class="hero-stat"><div class="num">29</div><div class="label">AI Rules</div></div>
-    <div class="hero-stat"><div class="num">12</div><div class="label">Custom Commands</div></div>
+    <div class="hero-stat"><div class="num">13</div><div class="label">Custom Commands</div></div>
     <div class="hero-stat"><div class="num">10</div><div class="label">MCP Integrations</div></div>
-    <div class="hero-stat"><div class="num">12</div><div class="label">Scheduled Automations</div></div>
+    <div class="hero-stat"><div class="num">13</div><div class="label">Scheduled Automations</div></div>
   </div>
 </div>
 
@@ -341,7 +341,7 @@
     <div class="arch-row">
       <div class="arch-box orange-hl">Weekly Job Report<br><small>Sun 6:00 PM</small></div>
       <div class="arch-box orange-hl">Monthly DOB Report<br><small>1st of Month 8 AM</small></div>
-      <div class="arch-box orange-hl">Swap Ctrl-Cmd<br><small>At Login</small></div>
+      <div class="arch-box orange-hl">Dependency Tracker<br><small>1st of Month 6:30 PM</small></div>
     </div>
 
     <div class="arch-connector">▼ Persistent State ▼</div>
@@ -431,7 +431,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <section id="commands">
   <div class="section-label">Workflow Automation</div>
-  <h2>12 Slash Commands — Multi-Step Workflows in One Trigger</h2>
+  <h2>13 Slash Commands — Multi-Step Workflows in One Trigger</h2>
   <p class="section-desc">Each command orchestrates a complex, multi-tool workflow that would otherwise take 15-45 minutes of manual context-switching between applications.</p>
 
   <table>
@@ -510,6 +510,12 @@
         <td>Pulls latest changes for all 30+ git repos, reports successes/failures/up-to-date in a clean summary</td>
         <td>Git</td>
         <td>~10 min</td>
+      </tr>
+      <tr>
+        <td><code>/dependency-tracker</code></td>
+        <td>Searches Jira for blocked/blocking issues across DEAL, EMM, BDDMD projects, builds dependency graph, identifies stale blocked tickets, optionally auto-comments asking for updates</td>
+        <td>Jira (Atlassian MCP)</td>
+        <td>~25 min</td>
       </tr>
     </tbody>
   </table>
@@ -599,7 +605,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <section id="automations">
   <div class="section-label">Unattended Automation</div>
-  <h2>12 Scheduled Jobs — Work That Happens Without You</h2>
+  <h2>13 Scheduled Jobs — Work That Happens Without You</h2>
   <p class="section-desc">macOS LaunchAgents run background tasks on schedule, generating reports, refreshing credentials, and syncing repositories. A self-monitoring weekly report tracks all job health.</p>
 
   <div class="card-grid">
@@ -670,10 +676,10 @@
       <span class="tag tag-orange">1st of Month 8 AM</span>
     </div>
     <div class="card">
-      <div class="icon">⌨️</div>
-      <h4>Swap Ctrl-Cmd Keys</h4>
-      <p>At login: automatically remaps Ctrl↔Cmd keys for external keyboard ergonomics via <code>hidutil</code>. Runs once at each macOS login with <code>RunAtLoad</code> — no scheduled recurrence needed.</p>
-      <span class="tag tag-purple">At Login</span>
+      <div class="icon">🔗</div>
+      <h4>Monthly Cross-Project Dependency Tracker</h4>
+      <p>1st of each month at 6:30 PM: searches Jira for blocked/blocking issues across DEAL, EMM, and BDDMD projects via REST API. Builds cross-project dependency graph, enriches blocked issues with last comment preview and exact blocked-since duration via changelog API. Generates HTML report with assignee heatmap, priority breakdown, week-over-week trend (new/resolved/net), and auto-comments on stale blocked tickets (14+ days). Converts to PDF and emails to stakeholder.</p>
+      <span class="tag tag-orange">1st of Month 6:30 PM</span>
     </div>
   </div>
 </section>
@@ -787,6 +793,11 @@
     </div>
     <div class="timeline-item">
       <div class="timeline-date">April 6, 2026</div>
+      <div class="timeline-title">Cross-Project Dependency Tracker — Built &amp; Automated</div>
+      <div class="timeline-desc">Monthly automated Jira dependency tracker across DEAL, EMM, BDDMD projects. Searches for blocked/blocking issues via REST API, enriches with changelog-derived blocked duration and last comment preview, builds cross-project dependency graph, generates HTML report with assignee heatmap, priority breakdown (P1-P4), and week-over-week trend analysis. Auto-comments on stale blocked tickets (14+ days). PDF emailed monthly. Also created <code>/dependency-tracker</code> Cursor command for on-demand interactive runs via Atlassian MCP.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">April 6, 2026</div>
       <div class="timeline-title">Automated 4 More Scheduled Jobs + Failure Alerting</div>
       <div class="timeline-desc">Built and deployed 4 new fully-automated LaunchAgents: Daily CEP Routing Diff (weekday 7:45 AM, visual diff of production routing rules), Weekly Architecture Snapshot Diff (Sun 7 PM, 15-query dealing architecture delta), Monthly DOB P&amp;L Report (1st of month, OMS data aggregation with Chart.js dashboard), and Figma Sync Launcher (upgraded from notification to clipboard+Cursor opener). Added `notify_failure()` to all 4 Databricks scripts — macOS Basso notification + Resend alert email on crash, with smart token-vs-general error detection and fix instructions. Validated all 13 jobs end-to-end.</div>
     </div>
@@ -861,11 +872,12 @@
       <tr><td>CEP routing rule change detection</td><td>~20 min/day × 5</td><td>Automated (0 min)</td><td><strong>1.5 hours</strong></td></tr>
       <tr><td>Architecture snapshot &amp; skill sync</td><td>~90 min/week</td><td>Automated (0 min)</td><td><strong>1.5 hours</strong></td></tr>
       <tr><td>Monthly DOB P&amp;L analysis</td><td>~60 min/month</td><td>Automated (0 min)</td><td><strong>15 min (avg)</strong></td></tr>
+      <tr><td>Cross-project dependency tracking &amp; stale ticket follow-up</td><td>~2 hours/month</td><td>Automated (0 min)</td><td><strong>30 min (avg)</strong></td></tr>
       <tr style="background:var(--accent-dim);">
         <td><strong>Total Weekly Savings</strong></td>
         <td></td>
         <td></td>
-        <td><strong style="color:var(--green);font-size:1.1rem;">~20 hours/week</strong></td>
+        <td><strong style="color:var(--green);font-size:1.1rem;">~20.5 hours/week</strong></td>
       </tr>
     </tbody>
   </table>
@@ -935,7 +947,7 @@
       <tr>
         <td>Automation</td>
         <td>Manual trigger only</td>
-        <td>12 scheduled jobs run unattended</td>
+        <td>13 scheduled jobs run unattended</td>
       </tr>
       <tr>
         <td>Personalization</td>
