@@ -230,7 +230,7 @@
   <div class="hero-stats">
     <div class="hero-stat"><div class="num">14</div><div class="label">Domain Skills</div></div>
     <div class="hero-stat"><div class="num">29</div><div class="label">AI Rules</div></div>
-    <div class="hero-stat"><div class="num">14</div><div class="label">Custom Commands</div></div>
+    <div class="hero-stat"><div class="num">15</div><div class="label">Custom Commands</div></div>
     <div class="hero-stat"><div class="num">10</div><div class="label">MCP Integrations</div></div>
     <div class="hero-stat"><div class="num">13</div><div class="label">Scheduled Automations</div></div>
   </div>
@@ -271,7 +271,7 @@
 
     <div class="arch-connector">▼ Slash Commands ▼</div>
 
-    <div class="arch-label">Layer 3 — Workflow Orchestration (14 Commands)</div>
+    <div class="arch-label">Layer 3 — Workflow Orchestration (15 Commands)</div>
     <div class="arch-row">
       <div class="arch-box green-hl">Ticket Creation</div>
       <div class="arch-box green-hl">Meeting → Ticket</div>
@@ -284,6 +284,7 @@
       <div class="arch-box green-hl">Design System Sync</div>
       <div class="arch-box green-hl">Snapshot Update</div>
       <div class="arch-box green-hl">Investigation Tool</div>
+      <div class="arch-box green-hl">Search Sessions</div>
     </div>
 
     <div class="arch-connector">▼ Scheduled Execution ▼</div>
@@ -396,7 +397,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <section id="commands">
   <div class="section-label">Workflow Automation</div>
-  <h2>14 Slash Commands — Multi-Step Workflows in One Trigger</h2>
+  <h2>15 Slash Commands — Multi-Step Workflows in One Trigger</h2>
   <p class="section-desc">Each command orchestrates a complex, multi-tool workflow that would otherwise take 15-45 minutes of manual context-switching between applications.</p>
 
   <table>
@@ -487,6 +488,12 @@
         <td>Traces a single order's full lifecycle by ExecutionID or ClientRequestID — queries 11 Databricks investigation tool tables (hedge request, CEP routing, EMS orders, order log, IM pricing, FIX messages, execution result, position data), assembles chronological timeline with latency analysis, price analysis, and systemic outage detection</td>
         <td>Databricks SQL API</td>
         <td>~30 min</td>
+      </tr>
+      <tr>
+        <td><code>/search-sessions</code></td>
+        <td>Searches all past Cursor agent transcripts for a keyword or phrase, returns matching sessions with context snippets ranked by recency — enables instant recall of when and where any topic was discussed across hundreds of past sessions</td>
+        <td>Grep (agent transcripts)</td>
+        <td>~10 min</td>
       </tr>
     </tbody>
   </table>
@@ -837,7 +844,7 @@
 <!-- FOOTER -->
 <footer>
   <p>AI-Augmented PM Workflow — Cursor Setup Walkthrough<br>
-  Updated April 6, 2026 &nbsp;|&nbsp; Michael Portnov &nbsp;|&nbsp; eToro Trading Platform &amp; Dealing Engines</p>
+  Updated April 9, 2026 &nbsp;|&nbsp; Michael Portnov &nbsp;|&nbsp; eToro Trading Platform &amp; Dealing Engines</p>
 </footer>
 
 </body>
